@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("kepek/hatter.jpg");
+}
+
+main {
+  background-color: white;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "n ar as"
+    "f f f";
+}
+
+header {
+  background-image: url("kepek/fejlec.jpg");
+  color: white;
+  height: 150px;
+  grid-area: h;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav {
+  grid-area: n;
+}
+
+nav ul {
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+}
+
+nav ul li {
+  background-color: dodgerblue;
+  margin: 2px;
+  padding: 5px 0 5px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 50px 5px 50px;
+}
+
+article {
+  grid-area: ar;
+}
+
+article table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+article table th,
+article table td {
+  border-bottom: 1px solid dodgerblue;
+}
+
+article table tr:nth-child(odd) {
+  background-color: skyblue;
+}
+
+aside {
+  padding: 15px;
+  border: 1px solid #aaaaaa;
+  grid-area: as;
+}
+
+footer {
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 15px;
+  grid-area: f;
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    grid-template-areas:
+      "h h"
+      "n n"
+      "ar as"
+      "f f";
+  }
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    grid-template-areas:
+      "h"
+      "n"
+      "ar"
+      "as"
+      "f";
+  }
+}
